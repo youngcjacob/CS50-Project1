@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>All Pages</h1>
+
+    <ul>
+        <input type="submit" value="Submit">
+        <label for="content">Add content</label>
+        <textarea id="content" name="body_content" rows="4" cols="50">
+        enter text here!
+        </textarea>
+    </ul>
+
+{% endblock %}
