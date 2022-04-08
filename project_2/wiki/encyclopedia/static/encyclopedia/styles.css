@@ -2,6 +2,10 @@ body {
     margin: 0;
     background-color: white;
 }
+content {
+    height: 10px;
+    background-color: white;
+}
 
 code {
     white-space: pre;

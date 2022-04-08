@@ -5,14 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1>Create a New Entry</h1>
 
-    <ul>
+    <form action="{% url 'add_page' %}" method="post">
         <input type="submit" value="Submit">
-        <label for="content">Add content</label>
-        <textarea id="content" name="body_content" rows="4" cols="50">
-        enter text here!
-        </textarea>
-    </ul>
+        <input type="text" name="entry_title" placeholder="Enter Title"><br>
+        {% csrf_token %}
+        <label for="content"><h2>Add content</h2></label><br>
+        <textarea id="content" name="body_content" rows="60" cols="60" placeholder="Enter content details">
+        </textarea>    
+    </form> 
 
 {% endblock %}

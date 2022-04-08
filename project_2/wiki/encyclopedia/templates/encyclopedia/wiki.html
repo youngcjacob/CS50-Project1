@@ -6,6 +6,13 @@
 
 {% block body %}
     <h1>{{ Title }}</h1>
-    {{ Contents }}
-
+    <textarea id="content" name="body_content" rows="10" cols="50" placeholder="Enter content details">
+        {{ Contents }}
+    </textarea>
+    <form action="{% url 'edit_page' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Edit Entry">
+        <input type="hidden" value="{{ Title }}" name="title">
+        <input type="hidden" value="{{ Contents }}" name="contents">
+    </form> 
 {% endblock %}
